@@ -1,0 +1,17 @@
+{
+    "defaultCommandTimeout":5000,
+    "projectId":"Test",
+    "reporter": "./node_modules/mochawesome/src/mochawesome.js",
+    "reporterOptions": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "screenshotsFolder": "cypress/results/assets/screenshots",
+      "videosFolder":"cypress/results/assets/videos",
+      "videoUploadOnPasses": false, 
+      "baseUrl":"http://localhost:3000",
+      "viewportWidth": 1000,
+      "viewportHeight": 1000
+}

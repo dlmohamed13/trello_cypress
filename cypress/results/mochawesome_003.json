@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-03T00:52:55.484Z",
+    "end": "2021-05-03T00:52:56.340Z",
+    "duration": 856,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "89245c46-e4d5-4794-9f26-37d0533aee65",
+      "title": "",
+      "fullFile": "cypress/integration/ui_tests/task_operations.js",
+      "file": "cypress/integration/ui_tests/task_operations.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d5c793f7-6862-4636-9b4c-a9263f007a27",
+          "title": "User Should be to sucessfully perform list operations",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to create a task",
+              "fullTitle": "User Should be to sucessfully perform list operations Should be able to create a task",
+              "timedOut": null,
+              "duration": 333,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cov_11afjark6n().f[2]++;",
+              "err": {},
+              "uuid": "ba6ec576-fe18-4076-9aa2-e2a21ec3a9ce",
+              "parentUUID": "d5c793f7-6862-4636-9b4c-a9263f007a27",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should be able to delete a task ",
+              "fullTitle": "User Should be to sucessfully perform list operations Should be able to delete a task ",
+              "timedOut": null,
+              "duration": 126,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cov_11afjark6n().f[3]++;",
+              "err": {},
+              "uuid": "400a8778-9231-4cf2-b15e-327855d1f3a0",
+              "parentUUID": "d5c793f7-6862-4636-9b4c-a9263f007a27",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should be to edit task name",
+              "fullTitle": "User Should be to sucessfully perform list operations Should be to edit task name",
+              "timedOut": null,
+              "duration": 116,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cov_11afjark6n().f[4]++;",
+              "err": {},
+              "uuid": "d1c49a49-0fe2-443a-b662-9d7a83e689d3",
+              "parentUUID": "d5c793f7-6862-4636-9b4c-a9263f007a27",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should be able to mark task as completed",
+              "fullTitle": "User Should be to sucessfully perform list operations Should be able to mark task as completed",
+              "timedOut": null,
+              "duration": 115,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cov_11afjark6n().f[5]++;",
+              "err": {},
+              "uuid": "00f0a108-15d9-4251-9d03-da00a92d9122",
+              "parentUUID": "d5c793f7-6862-4636-9b4c-a9263f007a27",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should be able unmark task as completed",
+              "fullTitle": "User Should be to sucessfully perform list operations Should be able unmark task as completed",
+              "timedOut": null,
+              "duration": 123,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cov_11afjark6n().f[6]++;",
+              "err": {},
+              "uuid": "2c67692f-8d2c-461f-beb4-47ae744882e7",
+              "parentUUID": "d5c793f7-6862-4636-9b4c-a9263f007a27",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ba6ec576-fe18-4076-9aa2-e2a21ec3a9ce",
+            "400a8778-9231-4cf2-b15e-327855d1f3a0",
+            "d1c49a49-0fe2-443a-b662-9d7a83e689d3",
+            "00f0a108-15d9-4251-9d03-da00a92d9122",
+            "2c67692f-8d2c-461f-beb4-47ae744882e7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 813,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

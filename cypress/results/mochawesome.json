@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-03T00:52:29.898Z",
+    "end": "2021-05-03T00:52:30.776Z",
+    "duration": 878,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cb7fbf32-7f89-4467-a333-1ee2a3620053",
+      "title": "",
+      "fullFile": "cypress/integration/ui_tests/account_creation.js",
+      "file": "cypress/integration/ui_tests/account_creation.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c1f0c937-9d18-4682-b73f-904c02f6deb8",
+          "title": "User Should be to sucessfully perform list operations",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to create a new account",
+              "fullTitle": "User Should be to sucessfully perform list operations Should be able to create a new account",
+              "timedOut": null,
+              "duration": 499,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cov_24dw6qe0nf().f[2]++;",
+              "err": {},
+              "uuid": "09474aff-ec97-4d14-ae54-602beb4562ac",
+              "parentUUID": "c1f0c937-9d18-4682-b73f-904c02f6deb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should be able to log in with new account ",
+              "fullTitle": "User Should be to sucessfully perform list operations Should be able to log in with new account ",
+              "timedOut": null,
+              "duration": 127,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cov_24dw6qe0nf().f[3]++;",
+              "err": {},
+              "uuid": "530f3c62-5181-4908-b24c-f17fb04fdbcd",
+              "parentUUID": "c1f0c937-9d18-4682-b73f-904c02f6deb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should recieve new account email",
+              "fullTitle": "User Should be to sucessfully perform list operations Should recieve new account email",
+              "timedOut": null,
+              "duration": 116,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cov_24dw6qe0nf().f[4]++;",
+              "err": {},
+              "uuid": "be9e712c-2a96-48dc-be3b-392501ce7787",
+              "parentUUID": "c1f0c937-9d18-4682-b73f-904c02f6deb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should only see account boards",
+              "fullTitle": "User Should be to sucessfully perform list operations Should only see account boards",
+              "timedOut": null,
+              "duration": 109,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cov_24dw6qe0nf().f[5]++;",
+              "err": {},
+              "uuid": "f70e8533-3291-49b3-bfc8-44fde671696b",
+              "parentUUID": "c1f0c937-9d18-4682-b73f-904c02f6deb8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "09474aff-ec97-4d14-ae54-602beb4562ac",
+            "530f3c62-5181-4908-b24c-f17fb04fdbcd",
+            "be9e712c-2a96-48dc-be3b-392501ce7787",
+            "f70e8533-3291-49b3-bfc8-44fde671696b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 851,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

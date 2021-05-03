@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-05-03T00:52:46.443Z",
+    "end": "2021-05-03T00:52:52.284Z",
+    "duration": 5841,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "02a39fcb-84c1-4ba6-b8f4-a1e2afaecdc8",
+      "title": "",
+      "fullFile": "cypress/integration/ui_tests/list_operations.js",
+      "file": "cypress/integration/ui_tests/list_operations.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a6b6c5d0-c7f8-49b0-ac76-953e8a3ca9ce",
+          "title": "User Should be to sucessfully perform list operations",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to add tasks to a list",
+              "fullTitle": "User Should be to sucessfully perform list operations Should be able to add tasks to a list",
+              "timedOut": null,
+              "duration": 5807,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  \"/Users/deonte.mohamed/Development/personal_projects/interviewPrep/trelloapp/cypress/results/assets/screenshots/ui_tests/list_operations.js/User Should be to sucessfully perform list operations -- Should be able to add tasks to a list (failed).png\",\n  \"/Users/deonte.mohamed/Development/personal_projects/interviewPrep/trelloapp/cypress/results/assets/videos/ui_tests/list_operations.js.mp4\"\n]",
+              "code": "cov_n4njev3qp().f[5]++;\ncov_n4njev3qp().s[23]++;\ncy.get('[data-cy=new-task]').click();\ncov_n4njev3qp().s[24]++;\ncy.get('[data-cy=task-input]').type('new task! {enter}');\ncov_n4njev3qp().s[25]++;\ncy.get('[data-cy=task]').should('be.visible'); //cy.log(cy.get('.Task_title').);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[data-cy=new-task]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[data-cy=new-task]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/ui_tests/list_operations.js:643:8)",
+                "diff": null
+              },
+              "uuid": "b00dde4a-228a-4879-a3fa-03159116cccd",
+              "parentUUID": "a6b6c5d0-c7f8-49b0-ac76-953e8a3ca9ce",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b00dde4a-228a-4879-a3fa-03159116cccd"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5807,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
