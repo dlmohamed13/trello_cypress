@@ -75,17 +75,6 @@ services:
       - K6_OUT=influxdb=http://influxdb:8086/k6
     volumes:
       - ./samples:/scripts
-  cypress:
-    image: cypress
-    build: ./e2e
-    container_name: cypress
-    environment:
-      - CYPRESS_baseUrl=http://localhost:4000 
-    command: npx cypress run
-    volumes:
-      - ./e2e/cypress:/app/cypress
-      - ./e2e/cypress.json:/app/cypress.json
-      
 volumes:
   elasticsearch-data:
      driver: local
