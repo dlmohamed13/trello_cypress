@@ -22,11 +22,7 @@ describe('User Should be to sucessfully perform list operations', () => {
       },
       body: {'name': 'List Board'}
     }).then((res) => {
-      cy.request({
-        method: 'POST',
-        url: '/api/lists'
-      })
-      cy.visit('http://localhost:3000/board/' + res.body.id);
+      cy.visit('/board/' + res.body.id );
     });
     
   });

@@ -1,5 +1,8 @@
 const moment = require('moment');
-const sendmail = require('sendmail')();
+const sendmail = require('sendmail')({
+  devPort: 1025, // Default: False
+  devHost: 'localhost', // Default: localhost
+});
 const path = require('path'); // used for file path
 const fs = require('fs-extra');
 const socket = require('socket.io-client')('http://localhost:3000');
@@ -184,10 +187,10 @@ module.exports = (req, res, next) => {
 
     // send welcome email if header is true
     sendmail({
-      from: 'trelloapp@filiphric.sk',
+      from: 'trelloapp@testProj.sk',
       to: req.body.email,
       subject: 'Welcome to Trello app',
-      html: 'Your account was successfully created!\nIn the meantime, subscribe to my <a href="https://www.youtube.com/channel/UCDOCAVIhSh5VpJMEfdak1OA">YouTube channel for Cypress tips!</a>',
+      html: 'Your account was successfully created!',
     }, function(err, reply) {
       console.log(err && err.stack);
       console.dir(reply);

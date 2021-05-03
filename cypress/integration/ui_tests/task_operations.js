@@ -21,18 +21,31 @@ describe('User Should be to sucessfully perform list operations', () => {
       },
       body: {'name': 'List Board'}
     }).then((res) => {
-      cy.visit('http://localhost:3000/board/' + res.body.id);
+      cy.request({
+        method: 'POST',
+        url: '/api/lists',
+        headers: {
+          'Accept': 'application/json, text/plain, */*'
+        },
+        body: {'boardId': res.body.id, 'title': 'New List '}
+      });
+      cy.visit('/board/' + res.body.id);
+      //+ res.body.id
     });
   });
 
-  it('Should be able to create a task', () => {});
+  it('Should be able to create a task', () => {
+    cy.get('[data-cy=new-task]').click();
+    cy.get('[data-cy=task-input]').type('Some Task {enter}');
+    
+  });
 
-  it('Should be able to delete a task ', () => {});
-
-  it('Should be to edit task name', () => {});
-
-  it('Should be able to mark task as completed', () => {});
-
-  it('Should be able unmark task as completed', () => {});
-
+  it('Should be able to mark task as completed and not completed', () => {
+    cy.get('[data-cy=new-task]').click();
+    cy.get('[data-cy=task-input]').type('Some Task {enter}');
+    cy.get('[data-cy=task-done]').click();
+    cy.get('.Task_title.completed').should('be.visible');
+    cy.get('[data-cy=task-done]').click();
+    cy.get('.Task_title.completed').should('not.exist');
+  });
 });

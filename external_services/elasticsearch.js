@@ -5,7 +5,7 @@ const mocha_results = require ('./../mochawesome-report/mochawesome.json');
 const fs = require('fs');
 const { Console } = require('console');
 const indicies = {
-  PERFOMRANCE_TEST: 'performance_testing',
+  PERFORMANCE_TEST: 'performance_testing',
   API_TEST: 'api_testing',
   UI_TEST: 'ui_testing',
   DEV: 'dev'
@@ -19,7 +19,7 @@ const esClient = elastic.Client({
 function postk6Data(filePath) {
   lineReader.eachLine(filePath, function(line) {
     esClient.index({
-      index: indicies.PERFOMRANCE_TEST,
+      index: indicies.PERFORMANCE_TEST,
       body: line
     })
       .catch(err => {
