@@ -4,7 +4,7 @@ const axios = require('axios');
 const vueDropzone = require('vue2-dropzone');
 const VueSocketIOExt = require('vue-socket.io-extended');
 const io = require('socket.io-client');
-const socket = io('http://localhost:3000');
+const socket = io('http://localhost:4000');
 const _ = require('lodash');
 const draggable = require('vuedraggable');
 Vue.use(VueSocketIOExt, socket);
@@ -82,7 +82,7 @@ Vue.component('board', {
       newListInputActive: false,
       newTaskInputActive: null,
       dropzoneOptions: {
-        url: 'http://localhost:3000/api/upload',
+        url: 'http://localhost:4000/api/upload',
         thumbnailWidth: 150,
         maxFilesize: 12
       }

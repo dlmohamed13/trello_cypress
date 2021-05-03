@@ -11,7 +11,7 @@
       "screenshotsFolder": "cypress/results/assets/screenshots",
       "videosFolder":"cypress/results/assets/videos",
       "videoUploadOnPasses": false, 
-      "baseUrl":"http://localhost:3000",
+      "baseUrl":"http://localhost:4000",
       "viewportWidth": 1000,
       "viewportHeight": 1000
 }

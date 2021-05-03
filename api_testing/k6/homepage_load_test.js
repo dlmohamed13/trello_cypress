@@ -1,5 +1,5 @@
 import http from 'k6/http';
-let host = __ENV.MY_HOSTNAME || 'http://localhost:3000';
+let host = __ENV.MY_HOSTNAME || 'http://localhost:4000';
 let params = {
   headers: {
     'Content-Type': 'application/json',

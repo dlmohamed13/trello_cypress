@@ -4,7 +4,7 @@ let chaiHttp = require('chai-http');
 let should = chai.should();
 let reset = require('../api_reference/reset');
 let resetAPI = reset.resetAPI;
-let host = process.env.APIHOST || 'http://localhost:3000/api';
+let host = process.env.APIHOST || 'http://localhost:4000/api';
 
 chai.use(chaiHttp);
 

@@ -1,7 +1,7 @@
 var request = require('request');
 var headers = {'Accept': 'application/json, text/plain, */*'};
 var resetAPI = {};
-let host = process.env.APIHOST || 'http://localhost:3000/api';
+let host = process.env.APIHOST || 'http://localhost:4000/api';
 resetAPI.resetAll = {
   endpoint: '/reset',
   options: {

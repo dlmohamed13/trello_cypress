@@ -5,7 +5,7 @@ const sendmail = require('sendmail')({
 });
 const path = require('path'); // used for file path
 const fs = require('fs-extra');
-const socket = require('socket.io-client')('http://localhost:3000');
+const socket = require('socket.io-client')('http://localhost:4000');
 
 function randomId() {
   return Math.floor(100000 * Math.random() * 900000);

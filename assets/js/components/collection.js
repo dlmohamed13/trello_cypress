@@ -2,7 +2,7 @@ const Vue = require('vue');
 const axios = require('axios');
 const VueSocketIOExt = require('vue-socket.io-extended');
 const io = require('socket.io-client');
-const socket = io('http://localhost:3000');
+const socket = io('http://localhost:4000');
 const Navbar = require('./navbar');
 Vue.use(VueSocketIOExt, socket);
 

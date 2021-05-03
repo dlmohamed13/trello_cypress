@@ -2,8 +2,6 @@
 const elastic = require('elasticsearch');
 const lineReader = require('line-reader');
 //const mocha_results = require ('./../mochawesome-report/mochawesome_cypress.json');
-const fs = require('fs');
-const { Console } = require('console');
 const indicies = {
   PERFORMANCE_TEST: 'performance_testing',
   API_TEST: 'api_testing',

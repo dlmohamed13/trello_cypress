@@ -1,6 +1,6 @@
 import http from 'k6/http';
 import { check, sleep, group } from 'k6';
-let host = __ENV.MY_HOSTNAME || 'http://localhost:3000';
+let host = __ENV.MY_HOSTNAME || 'http://localhost:4000';
 const SLEEP_DURATION = .50;
 export default function () {
   let params = {
