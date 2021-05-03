@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 let faker = require('faker');
 
-describe('User Should be to sucessfully perform list operations', () => {
+describe('User Should be to sucessfully perform account operations', () => {
   before('Setting State', () => {
     cy.request({
       method: 'POST',

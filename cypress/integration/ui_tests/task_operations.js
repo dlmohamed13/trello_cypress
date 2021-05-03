@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('User Should be to sucessfully perform list operations', () => {
+describe('User Should be to sucessfully perform task operations', () => {
   
   before('Setting State', () => {
     cy.request({
