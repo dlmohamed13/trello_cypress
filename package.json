@@ -13,10 +13,13 @@
     "delete-results": "rm -rf cypress/results/* || true",
     "cy:report": "npx mochawesome-merge cypress/results/*.json -o mochawesome-report/mochawesome_cypress.json && npx marge mochawesome-report/mochawesome_cypress.json",
     "all:report":"npx mochawesome-merge mochawesome-report/*.json -o mochawesome-report/combined_report.json && npx marge combined_report.json ",
+    "report:cy:post": "node -e 'require(\"./external_services/postElkData.js\").postMochaData(\"ui_testing\", \"./../mochawesome-report/mochawesome_cypress.json\")'",
+    "report:api:post": "node -e 'require(\"./external_services/postElkData.js\").postMochaData(\"api_testing\", \"./../mochawesome-report/mochawesome_api.json\")'",
     "report:delete": "rm -rf mochawesome-report/* || true",
     "cy:regression": "npm run delete-results && npm run report:delete && npm run cy:run;",
     "api_test": "mocha api_testing/api_test/*  --timeout 3000 --reporter mochawesome --reporter-option reportFilename=mochawesome_api ",
-    "all_test":"npm run cy:regression; npm run api_test; npm run cy:report; npm run all:report "
+    "all_test":"npm run cy:regression; npm run api_test; npm run cy:report; npm run all:report; npm run report:cy:post; npm run report:api:post "
+    
   },
   "browser": {
     "vue": "vue/dist/vue.common.js"
