@@ -1,6 +1,7 @@
 var request = require('request');
 var headers = {'Accept': 'application/json, text/plain, */*'};
 var resetAPI = {};
+let host = process.env.APIHOST || 'http://localhost:3000/api';
 resetAPI.resetAll = {
   endpoint: '/reset',
   options: {
@@ -38,14 +39,11 @@ resetAPI.resetUsers = {
   }
 };
 function callback(error, response, body) {
-  console.log('EVALUATING RESPONSE');
   if (!error &&  200 <= response.statusCode <= 299 ) {
-    console.log('RESPONSE SUCCESSFULL');
     console.log(body);
   }
   else
   {
-    console.log('RESPONSE NOT SUCCESSFUL, EVALUATING');
     console.log(JSON.stringify(response));
     if(error)
     {
@@ -57,19 +55,12 @@ function callback(error, response, body) {
 
 resetAPI.executeReset = async function(endpoint, options){
   var options = {
-    url: `http://localhost:3000/api${endpoint}`,
+    url: `${host}${endpoint}`,
     method: options.method,
     headers: options.headers
   };
   await request(options, callback).end;
   console.log(`Reset Executed at ${endpoint} with options ${JSON.stringify(options)}`);
-};
-var options2 = {
-  url: 'http://localhost:3000/api/reset',
-  method: 'POST',
-  headers: {
-    'Accept': 'application/json, text/plain, */*'
-  }
 };
 
 resetAPI.executeReset(resetAPI.resetAll.endpoint, resetAPI.resetAll.options);

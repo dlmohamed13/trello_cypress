@@ -1,14 +1,14 @@
-process.env.NODE_ENV = 'test';
+
 let chai = require('chai');
 let chaiHttp = require('chai-http');
 let should = chai.should();
 let reset = require('../api_reference/reset');
 let resetAPI = reset.resetAPI;
-let host = 'http://localhost:3000/api';
+let host = process.env.APIHOST || 'http://localhost:3000/api';
 
 chai.use(chaiHttp);
 
-describe('Should Exercise API Functionality for Bards', ()  => {
+describe('Should Exercise API Functionality for Boards', ()  => {
   before('Should delete all boards', () => {
     resetAPI.executeReset(resetAPI.resetAll.endpoint, resetAPI.resetAll.options);
   });
@@ -24,7 +24,6 @@ describe('Should Exercise API Functionality for Bards', ()  => {
         res.body.should.have.property('starred').eq(false);
         res.body.should.have.property('created');
         console.log(res.body);
-        console.log(res.request);
         done();
       });
 
@@ -53,7 +52,6 @@ describe('Should Exercise API Functionality for Bards', ()  => {
         res.body.should.be.a('array');
         res.body.length.should.be.eq(1);
         res.body[0].should.have.property('name').eq('New Board');
-        console.log(res.body[0]['id']);
         updateId = res.body[0]['id'];
         chai.request(host)
           .patch('/boards/' + updateId)
