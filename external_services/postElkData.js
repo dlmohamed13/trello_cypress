@@ -13,7 +13,7 @@ const esClient = elastic.Client({
   host: 'http://127.0.0.1:9200'
 });
 
-function postk6Data(filePath) {
+async function postk6Data(filePath) {
   lineReader.eachLine(filePath, function(line) {
     esClient.index({
       index: indicies.PERFORMANCE_TEST,
