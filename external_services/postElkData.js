@@ -1,7 +1,6 @@
 
 const elastic = require('elasticsearch');
 const lineReader = require('line-reader');
-//const mocha_results = require ('./../mochawesome-report/mochawesome_cypress.json');
 const indicies = {
   PERFORMANCE_TEST: 'performance_testing',
   API_TEST: 'api_testing',
@@ -63,7 +62,6 @@ async function postMochaData(index, resultspath = './../mochawesome-report/mocha
  
 }
 
-postMochaData(indicies.DEV);
 module.exports = {
   postk6Data,
   postMochaData,
