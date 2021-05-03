@@ -6,11 +6,11 @@ To start the trello application:
 
 There are some external integrations tied into my framework. If these services aren't up local to the test host at their default ports the framework will still function but you will see some errors/failures related to  x can't be reached/is unavailable 
 
-Builtin External Integrations 
-Elasticsearch - For UI/API Test Data/Results 
-Influxdb - For performance/k6 data/results 
-Mailhog/SMTP - SMTP Endpoint for email notification validation
+Builtin External Integrations:
+- Elasticsearch - For UI/API Test Data/Results 
+- Influxdb - For performance/k6 data/results 
+- Mailhog/SMTP - SMTP Endpoint for email notification validation
 
-Other Services
-Kibana 
-Grafana 
+Other Services:
+- Kibana 
+- Grafana 
