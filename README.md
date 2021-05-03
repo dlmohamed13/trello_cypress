@@ -14,3 +14,15 @@ Builtin External Integrations:
 Other Services:
 - Kibana 
 - Grafana 
+
+Execution Instructions 
+Bring Up Local Services by Running 
+ - docker-compose up -d 
+In Project Root Directory of the project 
+ - npm:run all_test
+To Execute Load Tests
+ - Install K6 if running tests and trello locally (to avoid local docker network/macos quirks)
+ - https://k6.io/docs/getting-started/installation/
+ - k6 run --vus ${number of users} --iterations ${number of iterations}  api_testing/k6/user_scenario_load_test.js --out influxdb=http://localhost:8086/myk6db
+ or 
+ - docker run --network="host" -i loadimpact/k6 run --vus ${number of users} --iterations ${number of iterations} -<api_testing/k6/user_scenario_load_test.js
