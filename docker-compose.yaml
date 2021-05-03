@@ -59,7 +59,12 @@ services:
       - GF_AUTH_BASIC_ENABLED=false
     volumes:
       - ./grafana:/etc/grafana/provisioning/
-
+ 
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025 # smtp server
+      - 8025:8025 # web ui
   k6:
     image: loadimpact/k6:latest
     networks:
