@@ -39,27 +39,28 @@ async function checkIndex(index){
 
 async function postMochaData(index, resultspath = './../mochawesome-report/mochawesome_cypress.json') {
   const mocha_results = require (resultspath); 
-  testResults = mocha_results['results'][0]['suites'][0]['tests'];
+  results = mocha_results['results'];
   if(await checkIndex(index))
   {
     console.error('INDEX NOT FOUND, USE ONE OF: ' + JSON.stringify(indicies));
     process.exit(1);
   }
-  testResults.forEach(result => {
-    let date = new Date();
-    result.executionDate = date.toISOString();
-    esClient.index({
-      index: index,
-      body: result
-    }).then(res => {
-      console.log(res);
-    })
-      .catch(err => {
-        console.log(err.body);
-      });
-      
+  results.forEach(result => {
+    result.suites[0].tests.forEach(testResult => {
+      let date = new Date();
+      testResult.executionDate = date.toISOString();
+      esClient.index({
+        index: index,
+        body: testResult
+      }).then(res => {
+        console.log(res);
+      })
+        .catch(err => {
+          console.log(err.body);
+        });
+    });
   });
- 
+  
 }
 
 module.exports = {
